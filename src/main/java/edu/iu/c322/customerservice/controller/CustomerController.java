@@ -1,10 +1,22 @@
 package edu.iu.c322.customerservice.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import edu.iu.c322.customerservice.model.Customer;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/customers")
 public class CustomerController {
 
+    @GetMapping()
+    public List<Customer> findAll() {
+        return null;
+    }
+
+    @PostMapping()
+    public int create(@RequestBody Customer customer) {
+
+        return customer.getId();
+    }
 }
