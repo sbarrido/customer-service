@@ -1,10 +1,12 @@
 package edu.iu.c322.customerservice.repository;
 
 import edu.iu.c322.customerservice.model.Customer;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class CustomerRepo {
     private List<Customer> cusRepo = new ArrayList<>();
 
