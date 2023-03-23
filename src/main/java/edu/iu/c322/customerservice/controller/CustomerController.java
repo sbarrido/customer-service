@@ -24,4 +24,9 @@ public class CustomerController {
     public void update(@RequestBody Customer customer, @PathVariable int id) {
         cusRepo.update(customer, id);
     }
+
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id) {
+        cusRepo.delete(id);
+    }
 }
