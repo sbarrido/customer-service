@@ -25,6 +25,8 @@ public class CustomerRepo {
         if(target != null) {
             target.setName(customer.getName());
             target.setEmail(customer.getEmail());
+        } else {
+            throw new IllegalStateException("Customer id not valid");
         }
    }
 
@@ -32,6 +34,8 @@ public class CustomerRepo {
         Customer target = getCusByID(id);
         if(target != null) {
             cusRepo.remove(target);
+        } else {
+            throw new IllegalStateException("Customer id not valid");
         }
    }
    private Customer getCusByID(int id) {
